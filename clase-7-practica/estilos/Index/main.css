@@ -1,0 +1,16 @@
+.titulo{
+    font-family: var(--ff-titulo);
+    margin-left: 220px;
+    text-decoration: underline solid rgba(0, 0, 0, 0.198);
+    font-weight: 400;
+}
+
+.circulo{
+    font-family: var(--ff-texto);
+    font-size: 15px;
+    background-color: var(--color-back);
+    height: 150px;
+    width: 150px;
+    border: 3px solid;
+    border-radius: 50%;
+}
