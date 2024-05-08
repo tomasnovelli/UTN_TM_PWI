@@ -13,18 +13,25 @@
     box-sizing: border-box;
 }
 
+section .cards{
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+
 .card{
     margin: 20px;
     display: flex;
     width: 350px;
-    height: 450px;
+    height: 430px;
     flex-direction: column;
     border: 1px solid #673de646 ;
     border-radius: 2%;
+    overflow: hidden;
 }
 
 .card .card-info{
-    height: 330px;
+    height: 320px;
     padding-top: 40px;
     display: flex;
     flex-direction: column;
@@ -54,10 +61,13 @@
 
 
 .user-info{
-    padding: 33px;
+    height: 110px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding-right: 60px;
     border-top: 1px solid #673de646 ;
+    background-color: #F4F5FF;
 }
 
 .user-info .user-pic img{
@@ -80,7 +90,7 @@
 .user-info .user-name h3{
     font-family: var(--ff-main);
     font-weight: 250;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
