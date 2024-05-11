@@ -14,14 +14,51 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--ff-text);
+    color: var(--font-color);
 }
 
-main .sitio-seguro{
+
+.sitio-seguro{
+    background-color: var(--back-color);
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
-    margin-top: 70px;
+    padding: 60px 5px;  
 }
+
+.top-section .advantages {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section .advantages h2{
+    font-size: 25px;
+    word-spacing: 1px;
+}
+
+
+.top-section .advantages .adv-list i{
+    font-size: 25px; 
+}
+
+.top-section .advantages .adv-list p{
+    font-weight: 450;
+}
+
+.top-section .advantages .adv-list{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 100;
+    
+}
+.top-section .img-girl img{
+    margin-top: 30px;
+    width: 100%;
+}
+
 
 
