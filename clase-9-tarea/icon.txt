@@ -2,5 +2,5 @@
 (check Icon)
 <i class="bi bi-check"></i>
 
-(arrow right)
-<i class="bi bi-caret-right"></i>
+(chevron right)
+<i class="bi bi-chevron-right"></i>

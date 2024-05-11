@@ -23,19 +23,25 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    padding: 60px 5px;  
+    padding: 60px 0px;  
+    gap: 25px;
 }
+
+/* top-section*/
 
 .top-section .advantages {
     display: flex;
     flex-direction: column;
+    padding: 7px;
+    gap: 18px;
 }
 
 .top-section .advantages h2{
     font-size: 25px;
     word-spacing: 1px;
+    margin-bottom: 10px;
+    padding-left: 5px;
 }
-
 
 .top-section .advantages .adv-list i{
     font-size: 25px; 
@@ -43,22 +49,125 @@
 
 .top-section .advantages .adv-list p{
     font-weight: 450;
+    font-size: 17px;
 }
 
 .top-section .advantages .adv-list{
-    padding-top: 25px;
     display: flex;
     flex-direction: row;
     gap: 3px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 25px;
     font-weight: 100;
     
 }
-.top-section .img-girl img{
-    margin-top: 30px;
+.top-section .advantages .img-girl img{
+    margin-top: 10px;
     width: 100%;
 }
 
 
+/* bottom-section*/
 
+section .bottom-section{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    gap: 40px;
+}
+
+section .bottom-section article{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--box-color);
+    padding: 35px;
+    border-radius: 2%;
+    
+}
+
+
+.bottom-section .reviews img{
+    width: 224px;
+}
+
+.bottom-section .reviews .review-txt{
+    font-size: 17px;
+    line-height: 25px;
+    
+}
+
+
+@media screen and (min-width: 540px){
+    .advantages .adv-list{
+        max-width: 540px;
+    }
+    .advantages .img-girl img{
+        max-width: 526px;
+    }
+    .bottom-section article{
+        max-width: 526px;
+    }
+}
+
+@media screen and (min-width: 650px){
+    
+    .sitio-seguro{
+        padding: 40px;
+    }
+
+    .advantages .adv-list{
+        max-width: 100%;
+    }
+    .advantages .img-girl img{
+        max-width: 100%;
+    }
+    .bottom-section article{
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .advantages .adv-list{
+        max-width: 818px;
+    }
+    .advantages .img-girl img{
+        max-width: 804px;
+    }
+    .bottom-section article{
+        max-width: 804px;
+    }
+}
+
+@media screen and (min-width: 1050px){
+    
+    .sitio-seguro{
+        padding: 130px;
+    }
+
+    .advantages .adv-list{
+        max-width: 100%;
+    }
+    .advantages .img-girl img{
+        max-width: 100%;
+    }
+    .bottom-section article{
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .advantages .adv-list{
+        max-width: 940px;
+    }
+    .advantages .img-girl img{
+        max-width: 926px;
+    }
+    .bottom-section article{
+        max-width: 926px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    
+}
