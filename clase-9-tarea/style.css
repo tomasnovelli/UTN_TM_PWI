@@ -22,8 +22,9 @@
     background-color: var(--back-color);
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100vw;
-    padding: 60px 0px;  
+    padding: 60px 5px;  
     gap: 25px;
 }
 
@@ -99,13 +100,13 @@ section .bottom-section article{
 
 
 @media screen and (min-width: 540px){
-    .advantages .adv-list{
+    .top-section .advantages .adv-list{
         max-width: 540px;
     }
-    .advantages .img-girl img{
+    .top-section .advantages .img-girl img{
         max-width: 526px;
     }
-    .bottom-section article{
+    section .bottom-section article{
         max-width: 526px;
     }
 }
@@ -116,25 +117,25 @@ section .bottom-section article{
         padding: 40px;
     }
 
-    .advantages .adv-list{
+    .top-section .advantages .adv-list{
         max-width: 100%;
     }
-    .advantages .img-girl img{
+    .top-section .advantages .img-girl img{
         max-width: 100%;
     }
-    .bottom-section article{
+    section .bottom-section article{
         max-width: 100%;
     }
 }
 
 @media screen and (min-width: 900px){
-    .advantages .adv-list{
+    .top-section .advantages .adv-list{
         max-width: 818px;
     }
-    .advantages .img-girl img{
+    .top-section .advantages .img-girl img{
         max-width: 804px;
     }
-    .bottom-section article{
+    section .bottom-section article{
         max-width: 804px;
     }
 }
@@ -145,29 +146,26 @@ section .bottom-section article{
         padding: 130px;
     }
 
-    .advantages .adv-list{
+    .top-section .advantages .adv-list{
         max-width: 100%;
     }
-    .advantages .img-girl img{
+    .top-section .advantages .img-girl img{
         max-width: 100%;
     }
-    .bottom-section article{
+    section .bottom-section article{
         max-width: 100%;
     }
 }
 
 @media screen and (min-width: 1200px){
-    .advantages .adv-list{
+    .top-section .advantages .adv-list{
         max-width: 940px;
     }
-    .advantages .img-girl img{
+    .top-section .advantages .img-girl img{
         max-width: 926px;
     }
-    .bottom-section article{
+    section .bottom-section article{
         max-width: 926px;
     }
 }
 
-@media screen and (min-width: 1600px){
-    
-}
