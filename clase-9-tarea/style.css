@@ -33,6 +33,7 @@
 .top-section .advantages {
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 7px;
     gap: 18px;
 }
@@ -41,7 +42,7 @@
     font-size: 25px;
     word-spacing: 1px;
     margin-bottom: 10px;
-    padding-left: 5px;
+    padding-left: 8px;
 }
 
 .top-section .advantages .adv-list i{
@@ -62,7 +63,7 @@
     font-weight: 100;
     
 }
-.top-section .advantages .img-girl img{
+.top-section .img-girl img{
     margin-top: 10px;
     width: 100%;
 }
@@ -82,9 +83,11 @@ section .bottom-section article{
     flex-direction: column;
     gap: 15px;
     background-color: var(--box-color);
-    padding: 35px;
-    border-radius: 2%;
     
+    padding: 35px;
+    padding-bottom: 60px;
+    border-radius: 2%;
+    position: relative;
 }
 
 
@@ -98,12 +101,32 @@ section .bottom-section article{
     
 }
 
+/* .bottom-section .reviews {
+} */
+
+.bottom-section .reviews .arrow-link{
+    font-size: 15px;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+}
+
+.bottom-section .reviews .arrow-link2{
+    position: absolute;
+    right: 40px;
+}
+
+.bottom-section .reviews .arrow-link3{
+    position: absolute;
+    right: 40px;
+}
+
 
 @media screen and (min-width: 540px){
     .top-section .advantages .adv-list{
         max-width: 540px;
     }
-    .top-section .advantages .img-girl img{
+    .top-section .img-girl img{
         max-width: 526px;
     }
     section .bottom-section article{
@@ -120,7 +143,7 @@ section .bottom-section article{
     .top-section .advantages .adv-list{
         max-width: 100%;
     }
-    .top-section .advantages .img-girl img{
+    .top-section .img-girl img{
         max-width: 100%;
     }
     section .bottom-section article{
@@ -132,7 +155,7 @@ section .bottom-section article{
     .top-section .advantages .adv-list{
         max-width: 818px;
     }
-    .top-section .advantages .img-girl img{
+    .top-section .img-girl img{
         max-width: 804px;
     }
     section .bottom-section article{
@@ -149,7 +172,7 @@ section .bottom-section article{
     .top-section .advantages .adv-list{
         max-width: 100%;
     }
-    .top-section .advantages .img-girl img{
+    .top-section .img-girl img{
         max-width: 100%;
     }
     section .bottom-section article{
@@ -161,7 +184,7 @@ section .bottom-section article{
     .top-section .advantages .adv-list{
         max-width: 940px;
     }
-    .top-section .advantages .img-girl img{
+    .top-section .img-girl img{
         max-width: 926px;
     }
     section .bottom-section article{
@@ -169,3 +192,45 @@ section .bottom-section article{
     }
 }
 
+@media screen and (min-width: 1600px){
+    
+
+    .top-section{
+        display: flex;
+    }
+
+    .top-section .advantages{
+        flex-direction: column;
+        justify-content: center;
+        width: 480px;
+        position: relative;
+        left: 600px;
+    }
+
+    .top-section .img-girl img{
+        max-width: 580px;
+        position: relative;
+        right: 550px;
+    }
+
+
+    .top-section .advantages h2{
+    font-size: 40px;
+    word-spacing: 1px;
+    margin-bottom: 10px;
+    padding-left: 8px;
+}
+
+
+
+    section .bottom-section{
+        flex-direction: row;
+        gap: 25px;
+        padding: 0px 120px;
+    }
+
+    section .bottom-section .reviews{
+        flex: 1;
+    }
+
+}
