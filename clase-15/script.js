@@ -1,83 +1,115 @@
+if(localStorage.getItem('historial') === null){
+    localStorage.setItem('historial', JSON.stringify([]))
+}
+/* validacion email */
 const tieneMayuscula = (palabra) => palabra.toLowerCase() !== palabra
-const validacionEmail = (email) => {
-    return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)
+const validacionEmail = (email) => /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)
+const validacionPassword = (password) => password && password.length >= 6 && tieneMayuscula(password)
+
+/* Validacion operador y numero */
+const validarOperacion = (operador) => {
+    const OPERACIONES_DISPONIBLES = ['+', '-', '*', '/']
+    return OPERACIONES_DISPONIBLES.includes(operador)
+    
 }
-const validacionPassword = (password) => {
-    return password && password.length >= 6 && tieneMayuscula(password)
+
+const validarNumero = (numero) => numero && !isNaN(numero)
+
+/* funcion CallBack solicitar datos */
+const solicitarDato = (objeto) =>{
+    let dato = prompt(objeto.mensaje)
+    while(!objeto.validacion(dato)){
+        dato = prompt(objeto.error)
+    }
+    return dato
+}
+const funcionOperacion = (numero1, objetoDeResultado, numero2) => {
+    let resultado = 0
+    if(objetoDeResultado === '+'){
+        
+    }
+}
+
+const DATOS = {
+    EMAIL: {
+        mensaje: 'Ingrese un email',
+        error: 'Error email invalido: ingrese nuevamente el email',
+        validacion: validacionEmail
+
+    },
+    PASSWORD: {
+        mensaje: 'Ingrese una contraseña con minimo 6 caracteres y 1 mayuscula',
+        error: 'Error contraseña invalida, ingresa una contraseña',
+        validacion: validacionPassword
+
+    },
+    OPERADOR: {
+        mensaje: 'Ingresa un operador',
+        error: 'error solo son validas las operaciones "+" o "-"',
+        validacion: validarOperacion
+
+    },
+    NUMERO: {
+        mensaje: 'Ingresa un numero',
+        error: 'error numero no valido',
+        validacion: validarNumero
+
+    }
+
 }
 
 
-const login = () => {
+/* funcion login */
+const login = () =>{
     const usuario = {
         email: null,
         password: null
         
-    } 
-    let email = prompt('Ingrese un email')
-    while(!validacionEmail(email)){
-        email = prompt('Error email invalido: ingrese nuevamente el email')
-
-    }
-    usuario.email = email
-    let password = prompt('Ingrese la password que tenga mas de 6 caracteres y una mayuscula')
-    while(!validacionPassword(password)){
-        password = prompt('Error password invalida, vuelva a ingresar una password de 6 caracteres y una mayuscula')
-    
-    }
-    usuario.password = password
+    }   
+    usuario.email = solicitarDato(DATOS.EMAIL)
+    usuario.password = solicitarDato(DATOS.PASSWORD)
     alert(`Usuario ${usuario.email} registrado`)
     return usuario 
 
 }
 
-/* let usuarioRegistrado = login()
+/* guardar en historial el email */
+let usuarioRegistrado = login()
 localStorage.setItem(
-    'user', 
+    'historial', 
     JSON.stringify(usuarioRegistrado)
 )
 
-console.log(JSON.parse(localStorage.getItem('user'))) */
-
-
-
-
-/* const validarOperacion = (operador) => {
-    return operador && operador === '+' || operador === '-'
-}
-
-const validarNumero = (numero) => {
-    return numero && !isNaN(numero)
-}
-
-const calculadora = () =>{
-    
+/* funcion calculadora */
+const calculadora = () => {
     const operacion = {
+        operador: '',
         numero1: null,
         numero2: null,
         resultado: null
-    }
-
-    let operador = prompt('Ingresa un operador')
-    while(!validarOperacion(operador)){
-        operador = prompt('error solo son validas las operaciones "+" o "-"')
 
     }
+    operacion.operador = solicitarDato(DATOS.OPERADOR)
+    operacion.numero1 = solicitarDato(DATOS.NUMERO)
+    operacion.numero2 = solicitarDato(DATOS.NUMERO)
+    if(operacion.operador === '+') {
+        operacion.resultado = Number(operacion.numero1) + Number(operacion.numero2)
 
-    let numero1 = prompt('Ingresa un numero')
-    while(!validarNumero(numero1)){
-        numero1 = prompt('error numero no valido')
+    } 
+    else if(operacion.operador === '*'){
+        operacion.resultado = operacion.numero1 * operacion.numero2
+    }
+    else if(operacion.operador === '/'){
+        operacion.resultado = operacion.numero1 / operacion.numero2
+    }
+    else if(operacion.operador === '-'){
+        operacion.resultado = operacion.numero1 - operacion.numero2
 
     }
-
-    let numero2 = prompt('Ingresa un numero')
-    while(!validarNumero(numero2)){
-        numero2 = prompt('error numero no valido')
-
-    }
-    
+    alert(`El resultado de ${operacion.numero1} ${operacion.operador} ${operacion.numero2} es ${operacion.resultado} `)
     return operacion
     
 }
 
-calculadora() */
+calculadora()
 

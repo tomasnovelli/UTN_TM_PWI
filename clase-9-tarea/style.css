@@ -23,12 +23,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     padding: 60px 5px;  
     gap: 25px;
 }
 
 /* top-section*/
+
+
 
 .top-section .advantages {
     display: flex;
@@ -36,6 +38,7 @@
     width: 100%;
     padding: 7px;
     gap: 18px;
+    max-width: 540px;
 }
 
 .top-section .advantages h2{
@@ -192,7 +195,7 @@ section .bottom-section article{
     }
 }
 
-@media screen and (min-width: 1600px){
+@media screen and (min-width: 1300px){
     
 
     .top-section{

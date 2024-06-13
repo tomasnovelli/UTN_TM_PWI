@@ -105,12 +105,12 @@ const guardarEnHistorial = (objeto) =>{
 const renderizarHistorial = () =>{
     const historial = obtenerHistorial()
     let listaHistorial = ''
-    for (let objeto of historial){
+    for (const objeto of historial){
         listaHistorial = listaHistorial + `
-        Accion: ${objeto.accion}
-        Operacion: ${objeto.operacion}
-        Numeros: ${objeto.a}, ${objeto.b}
-        Resultado: ${objeto.resultado}
+        accion: ${objeto.accion}
+        operacion: ${objeto.operacion}
+        numeros: ${objeto.a}, ${objeto.b}
+        resultado: ${objeto.resultado}
         fecha: ${objeto.fecha}
         `
     }

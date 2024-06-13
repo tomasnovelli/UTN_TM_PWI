@@ -16,14 +16,13 @@
 section .cards{
     display: flex;
     width: 100vw;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card{
     margin: 20px;
     display: flex;
-    width: 350px;
-    height: 430px;
+    width: 360px;
     flex-direction: column;
     border: 1px solid #673de646 ;
     border-radius: 2%;
@@ -31,43 +30,51 @@ section .cards{
 }
 
 .card .card-info{
-    height: 320px;
+    height: 300px;
     padding-top: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 40px 30px 40px 30px;
-    flex-wrap: wrap;
-    
+    position: relative;
+    gap: 20px;
 }
 
 .card .card-info .info-stars i{
     color: #673DE6;
     padding-left: 2px;
+    font-size: 20px;
 
 }
 
 .card .card-info .review-text{
     font-family: var(--ff-main);
-    font-size: 16px;
+    font-size: 14px;
+    color: #673DE6;
 }
+
+.card .card-info .history-text{
+    position: absolute;
+    bottom: 40px;
+}
+
 
 .card .card-info .history-text a{
     font-family: var(--ff-main);
     font-weight: 700;
     color: #673DE6;
     text-decoration: none;
+    
 }
 
 
 .user-info{
-    height: 110px;
+    height: 130px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-right: 60px;
+    padding: 0px 30px;
     border-top: 1px solid #673de646 ;
     background-color: #F4F5FF;
+    gap: 10px
 }
 
 .user-info .user-pic img{
@@ -75,19 +82,18 @@ section .cards{
 }
 
 .user-info .user-name{
-    padding-left: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 5px;
     height: 55px;
 }
 
-.user-info .user-name h2{
+.user-info .user-name h3{
     font-family: var(--ff-main);
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.user-info .user-name h3{
+.user-info .user-name span{
     font-family: var(--ff-main);
     font-weight: 250;
     font-size: 14px;
