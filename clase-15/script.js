@@ -23,12 +23,6 @@ const solicitarDato = (objeto) =>{
     }
     return dato
 }
-const funcionOperacion = (numero1, objetoDeResultado, numero2) => {
-    let resultado = 0
-    if(objetoDeResultado === '+'){
-        
-    }
-}
 
 const DATOS = {
     EMAIL: {
@@ -74,11 +68,12 @@ const login = () =>{
 }
 
 /* guardar en historial el email */
-let usuarioRegistrado = login()
-localStorage.setItem(
-    'historial', 
-    JSON.stringify(usuarioRegistrado)
-)
+/* let usuarioRegistrado = JSON.stringify(login())
+localStorage.setItem('pepe', usuarioRegistrado) */
+
+/* version mejorada y recomendada*/
+localStorage.setItem('historial', JSON.stringify(login()))
+
 
 /* funcion calculadora */
 const calculadora = () => {
@@ -112,4 +107,5 @@ const calculadora = () => {
 }
 
 calculadora()
+
 
