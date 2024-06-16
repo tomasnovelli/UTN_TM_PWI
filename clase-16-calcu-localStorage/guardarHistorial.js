@@ -39,7 +39,7 @@ const guardarEnHistorial = (objeto) => {
 
 const renderizarHistorial = () => {
     const historial = obtenerHistorial()
-    let plantillaHistorial = ``
+    let plantillaHistorial = ''
     for(const objeto of historial){
         plantillaHistorial = plantillaHistorial + `
             Accion: ${objeto.accion}
