@@ -1,12 +1,15 @@
 import React from 'react'
+import './ColorsPalletStyle.css'
+
 
 const ColorsPalletList = (props) => {
+
   return (
-    <div>
-      <span>{props.colors.map((color) => {
-        return <div style={{backgroundColor: color}}>{color}</div>
-      })}</span>
-    </div>
+        <>
+          {props.colors.map((color) => {
+            return <div className='colors-block' style={{ backgroundColor: color }}><span className='color-text'>{color}</span></div>
+          })}
+        </>
   )
 }
 

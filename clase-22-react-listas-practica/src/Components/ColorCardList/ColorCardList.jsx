@@ -1,20 +1,26 @@
 import React from 'react'
 import ColorsPalletList from '../ColorsPalletList/ColorsPalletList'
+import './ColorCardsListStyle.css'
 
 const ColorCardList = (props) => {
+   
     return (
-        <div>
-            {
-                props.arrayCards.map((info) => {
-                    return(
-                        <>
-                            <ColorsPalletList colors={info.colors}/> 
-                            <button>{info.likes}</button>
-                            <span>{info.date}</span>
-                        </>
-                    )
-                })
-            }
+        <div className='card-container'>
+                {
+                    props.arrayCards.map((info) => {
+                        return(
+                            <div className='card'>  
+                            <div className='color-container'>
+                                <ColorsPalletList colors={info.colors}/> 
+                            </div>
+                            <div className='footer-card'>
+                                <button className='btn-likes'>{info.likes}</button>
+                                <span className='date'>{info.date}</span>
+                            </div>
+                            </div>
+                        )
+                    })
+                }
         </div>
     )
 }

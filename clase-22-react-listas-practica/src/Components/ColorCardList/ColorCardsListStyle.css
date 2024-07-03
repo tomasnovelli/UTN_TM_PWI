@@ -1,0 +1,22 @@
+.card-container{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.cards{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.btn-likes{
+    width: 65px;
+    height: 33px;
+    background-color: transparent;
+    border: 1px solid rgba(148, 145, 145, 0.377);
+    border-radius: 20%;
+    
+}
