@@ -1,0 +1,70 @@
+.navBar{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    height: 4rem;
+    border: solid 2px rgba(15, 15, 253, 0.801);
+    
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    left: 300px;    
+}
+
+.logo{
+    color: rgba(15, 15, 253, 0.801);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    position: relative;
+    right: 300px;
+}
+
+.home{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+.home:hover{
+    background-color: rgba(15, 15, 253, 0.801);
+    color: white;
+}
+
+.btn-login{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;   
+    color: rgba(15, 15, 253, 0.801);
+    font-weight: bold;
+    background-color: transparent;
+    border: solid 1px rgba(15, 15, 253, 0.801);
+    border-radius: 15%;
+    padding: 4px;
+}
+.btn-login:hover{
+    border: solid 1px red;
+    background-color: red;
+    color: white;
+}
+
+.btn-create{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;   
+    color: rgba(15, 15, 253, 0.801);
+    font-weight: bold;
+    background-color: transparent;
+    border: solid 1px rgba(15, 15, 253, 0.801);
+    border-radius: 10%;
+    padding: 4px;
+}
+
+.btn-create:hover{
+    border: solid 1px red;
+    background-color: red;
+    color: white;
+}
+
+
