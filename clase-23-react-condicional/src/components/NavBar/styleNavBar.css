@@ -1,0 +1,12 @@
+.navBar{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    height: 4rem;
+    border: solid 2px rgba(15, 15, 253, 0.801);
+    
+}
+
+
+
