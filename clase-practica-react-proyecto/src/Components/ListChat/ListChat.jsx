@@ -5,7 +5,7 @@ import './listChat.css'
 const ListChat = ({dataMook}) => {
 
     return (
-        <div className='chat-container'>
+        <div className='chatBox'>
             {
                 dataMook.map((chat) => <Chat 
                     author={chat.author} 

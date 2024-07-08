@@ -1,14 +1,12 @@
 import React from 'react'
-import ListChat from './Components/ListChat/ListChat'
-import { DATA_MOOK } from './Components/data' 
+import Layout from './Components/Layout/Layout'
 
 function App() {
 
   return (
     <div>
-      <ListChat dataMook={DATA_MOOK}/>
+      <Layout/>
     </div>
-
   )
 }
 

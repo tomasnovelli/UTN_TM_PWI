@@ -4,12 +4,35 @@ const Chat = ({ author, content, fecha, estado }) => {
 
     return (
         <>
-            <div className='chatBox'>
-                <span>{author}</span>
-                <p>{content}</p>
-                <span>{fecha}</span>
-                <span>{estado}</span>
-            </div>
+            {
+                author == 'Pepe'
+                    ? <div className='pepeMessage'>
+                        <span className='author'>{author}</span>
+                        <p className='messageContent'>{content}</p>
+                        <div className='footerMessage'>
+                            <span className='date'>{fecha}</span>
+                            {estado == 'visto'
+
+                                ? <span className='checkSeen'><i class="bi bi-check-all"></i></span>
+                                : <span className='checkDelivered'><i class="bi bi-check-all"></i></span>}
+
+                        </div>
+                    </div>
+
+                    : <div className='yoMessage'>
+                        <span className='author'>{author}</span>
+                        <p className='messageContent'>{content}</p>
+                        <div className='footerMessage'>
+                            <span className='date'>{fecha}</span>
+                            {estado == 'visto'
+
+                                ? <span className='checkSeen'><i class="bi bi-check-all"></i></span>
+                                : <span className='checkDelivered'><i class="bi bi-check-all"></i></span>
+
+                            }
+                        </div>
+                    </div>
+            }
         </>
     )
 }
