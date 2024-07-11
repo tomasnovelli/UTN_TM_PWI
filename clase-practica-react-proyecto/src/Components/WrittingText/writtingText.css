@@ -1,5 +1,6 @@
 .writtingText{
-    position: sticky;
     border: solid 1px black;
     background-color: grey;
+    padding: 4px;
 }
+

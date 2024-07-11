@@ -6,7 +6,7 @@ const WrittingText = () => {
       <form action="">
         <label htmlFor="">escribir</label>
         <input type="text" />
-        <submit type="submit">send</submit>
+        <button className='btn-submit' type="submit">Send</button>
       </form>
     </div>
   )
