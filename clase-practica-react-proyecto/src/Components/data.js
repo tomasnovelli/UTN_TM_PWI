@@ -31,22 +31,8 @@ const DATA_MOOK = [
         author: 'Pepe',
         content: 'todo bien?',
         fecha: 'ayer a 15:55',
-        estado: 'entregado',
+        estado: 'visto',
         id: 5
-    },
-    {
-        author: 'Yo',
-        content: 'bien vos?',
-        fecha: 'ayer a 16:02',
-        estado: 'visto',
-        id: 6
-    },
-    {
-        author: 'Pepe',
-        content: 'Excelente',
-        fecha: 'ayer a 16:02',
-        estado: 'visto',
-        id: 7
     }
     
 ]

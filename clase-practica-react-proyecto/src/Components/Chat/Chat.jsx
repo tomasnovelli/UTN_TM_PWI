@@ -12,8 +12,8 @@ const Chat = ({ author, content, fecha, estado }) => {
                         <div className='footerMessage'>
                             <span className='date'>{fecha}</span>
                             {estado == 'visto'
-                                ? <span className='checkSeen'><i class="bi bi-check-all"></i></span>
-                                : <span className='checkDelivered'><i class="bi bi-check-all"></i></span>
+                                ? <span className='checkSeen'><i className="bi bi-check-all"></i></span>
+                                : <span className='checkDelivered'><i className="bi bi-check-all"></i></span>
                             }
                         </div>
                     </div>
@@ -24,8 +24,8 @@ const Chat = ({ author, content, fecha, estado }) => {
                         <div className='footerMessage'>
                             <span className='date'>{fecha}</span>
                             {estado == 'visto'
-                                ? <span className='checkSeen'><i class="bi bi-check-all"></i></span>
-                                : <span className='checkDelivered'><i class="bi bi-check-all"></i></span>
+                                ? <span className='checkSeen'><i className="bi bi-check-all"></i></span>
+                                : <span className='checkDelivered'><i className="bi bi-check-all"></i></span>
                             }
                         </div>
                     </div>

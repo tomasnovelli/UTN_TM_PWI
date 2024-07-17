@@ -2,7 +2,11 @@
     position: absolute;
     height: 100vh;
     width: 100vw;
-    z-index: -1;
+
 }
 
+.body{
+    width: 100vw;
+    background-image: url("https://i.pinimg.com/736x/3a/2e/99/3a2e99d16f179dae33e2c394be2229fb.jpg");
+}
 

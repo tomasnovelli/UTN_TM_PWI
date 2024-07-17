@@ -14,13 +14,13 @@
 }
 
 .yoMessage{
-    background-color: rgba(66, 250, 66, 0.89);
+    background-color: var(--app-color);
     position: relative;
     left: 5rem;
 }
 
 .pepeMessage{
-    background-color: rgba(185, 185, 185, 0.897);
+    background-color: var(--textArea-color);
 }
 
 .author{
