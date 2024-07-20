@@ -1,11 +1,17 @@
 import React from 'react'
-import Layout from './Components/Layout/Layout'
+import Layout from './Components/Pages/Chat/Chat'
+import { Route, Routes } from 'react-router-dom'
+import Contacts from './Components/Pages/Contacts/Contacts'
+import Chat from './Components/Pages/Chat/Chat'
 
 function App() {
 
   return (
     <>
-      <Layout/>
+      <Routes>
+        <Route path='/' element={<Contacts />} />
+        <Route path='/chat/:contac_id' element={<Chat />}/>
+      </Routes>
     </>
   )
 }

@@ -31,7 +31,7 @@
     color: rgb(58, 58, 58);
 }
 .textInput:target{
-    border: none;
+    border-color: red;
 }
 .btn-submit{
     background-color: var(--app-color);

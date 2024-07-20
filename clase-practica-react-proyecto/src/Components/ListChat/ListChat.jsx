@@ -1,17 +1,17 @@
 import React from 'react'
-import Chat from '../Chat/Chat'
+import Message from '../Message/Message'
 import './listChat.css'
 
-const ListChat = ({dataMook}) => {
+const ListChat = ({dataMessage}) => {
 
     return (
         <div className='chatBox'>
             {
-                dataMook.map((chat) => <Chat 
+                dataMessage.map((chat) => <Message 
                     author={chat.author} 
-                    content={chat.content} 
-                    fecha={chat.fecha} 
-                    estado={chat.estado} 
+                    text={chat.text} 
+                    state={chat.state} 
+                    date={chat.date} 
                     key={chat.id}
                     />)
             }

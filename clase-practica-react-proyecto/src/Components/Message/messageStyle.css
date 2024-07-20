@@ -2,7 +2,7 @@
     color: rgb(0, 195, 255);
 }
 
-.pepeMessage, .yoMessage{
+.otroMessage, .yoMessage{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,10 +16,10 @@
 .yoMessage{
     background-color: var(--app-color);
     position: relative;
-    left: 5rem;
+    left: 25%;
 }
 
-.pepeMessage{
+.otroMessage{
     background-color: var(--textArea-color);
 }
 

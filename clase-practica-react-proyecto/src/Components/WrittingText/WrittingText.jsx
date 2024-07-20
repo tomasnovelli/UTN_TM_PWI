@@ -23,8 +23,8 @@ const WrittingText = ({handleSubmit}) => {
         <div className='textArea'>
         <i className="bi bi-emoji-smile smileFace"></i>
         <input className='textInput' placeholder='Mensaje' type="text" name='content' id='content' onChange={handleChangeContentValue} value={messageInput.content} />
-        <i class="bi bi-paperclip"></i>
-        <i class="bi bi-camera"></i>
+        <i className="bi bi-paperclip"></i>
+        <i className="bi bi-camera"></i>
         </div>
         <button className='btn-submit' type="submit"><i className="bi bi-send-fill"></i></button>
       </form>
