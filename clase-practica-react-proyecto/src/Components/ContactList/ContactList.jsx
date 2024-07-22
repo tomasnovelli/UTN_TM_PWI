@@ -4,7 +4,7 @@ import ContactCards from '../ContactCards/ContactCards'
 const ContactList = ({dataMook}) => {
 
     return (
-        <div>
+        <>
             {
                 dataMook.map((contacts) => {
                     return (
@@ -12,7 +12,7 @@ const ContactList = ({dataMook}) => {
                     )
                 })
             }
-        </div>
+        </>
     )
 }
 

@@ -1,12 +1,13 @@
 import React from 'react'
-import ContactList from './ContactList/ContactList'
 import { DATA_CONTACTOS } from '../../dataMook'
+import ContactList from '../../ContactList/ContactList'
+import './contacts.css'
 
 
 const Contacts = () => {
 
     return (
-        <div>
+        <div className='contacts'>
             <ContactList dataMook={DATA_CONTACTOS}/>
         </div>
     )

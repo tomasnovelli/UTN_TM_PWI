@@ -3,11 +3,16 @@ import ListChat from '../../ListChat/ListChat'
 import './chat.css'
 import { useParams } from 'react-router-dom'
 import { contactMessage } from '../../Helpers/contacts'
+import User from '../../User/User'
 
 const Chat = () => {
 
 const params = useParams()
-const {mensajes} = contactMessage(params.contac_id)
+const {
+        nombre,
+        mensajes,
+        thumbnail
+      } = contactMessage(params.contac_id)
 
 
 /*   const [newMessage, setNewMessage] = useState(DATA_MOOK)
@@ -27,6 +32,7 @@ const {mensajes} = contactMessage(params.contac_id)
   return (
     
     <div className='body'>
+      <User userName={nombre} userImg={thumbnail}/>
       <ListChat dataMessage={mensajes}/>
     </div>
   )

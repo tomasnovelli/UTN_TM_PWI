@@ -12,7 +12,7 @@ const ContactCards = ({contactData}) => {
     } = contactData
 
     return (
-        <Link to={'/chat/' + id}>
+        <Link className='contactCard' to={'/chat/' + id}>
             <img className={'img_' + nombre.toLowerCase()} src={thumbnail} alt="" width={35}/>
             <span>{nombre}</span>
             <span>{mensajes.length}</span>

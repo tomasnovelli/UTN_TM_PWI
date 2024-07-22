@@ -2,20 +2,25 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    height: 3rem;
+    height: 50px;
     background-color: var(--app-color);
 }
-.user-img{
-    border: 1px solid rgba(0, 0, 0, 0.082);
-    width: 12%;
-    height: 80%;
+.imgContainer{
+    width: 45px;
+    height: 45px;
     border-radius: 30px;
+    overflow: hidden;
     position: relative;
-    left: 25px;
-    background-color: grey;
-
+    left: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.082);
 }
-.user-avatar{
+.userImg{
+    position: absolute;
+    height: 100%;
+    width: 140%;
+}
+
+.userName{
     position: relative;
     left: 25px;
     font-weight: 500;
