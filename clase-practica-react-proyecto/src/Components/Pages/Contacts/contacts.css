@@ -1,3 +1,5 @@
-.contactCard{
-    border: 1px solid black;
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }

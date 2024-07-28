@@ -8,21 +8,19 @@ export const DATA_CONTACTOS = [
             {
                 author: 'Messi',
                 text: 'que hace amigo?',
-                state: 'visto',
                 date: 'ayer 13:15',
                 id: 11
             },
             {
                 author: 'Yo',
                 text: 'Hola campeon de todo, todo bien vos?',
-                state: 'entregado',
+                state: 'visto',
                 date: 'hoy 09:50',
                 id: 12
             },
             {
                 author: 'Messi',
                 text: 'Jaja, bien.. aca con anto y lo chico',
-                state: 'entregado',
                 date: 'ayer 13:15',
                 id: 13
             }
@@ -37,7 +35,6 @@ export const DATA_CONTACTOS = [
             {
                 author: 'Abuelita',
                 text: 'Hola querido, no te olvides por favor de traerme el tupper que te preste',
-                state: 'visto',
                 date: 'ayer 16:30',
                 id: 22
             },

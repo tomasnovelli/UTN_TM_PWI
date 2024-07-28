@@ -9,7 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Contacts />} />
-        <Route path='/chat/:contac_id' element={<Chat />}/>
+        <Route path='/chat/:contact_id' element={<Chat />}/>
       </Routes>
     </>
   )

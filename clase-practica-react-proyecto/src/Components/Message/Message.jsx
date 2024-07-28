@@ -25,10 +25,6 @@ const Message = ({ author, text, date, state }) => {
                             <p className='messageContent'>{text}</p>
                             <div className='footerMessage'>
                                 <span className='date'>{date}</span>
-                                {state == 'visto'
-                                    ? <span className='checkSeen'><i className="bi bi-check-all"></i></span>
-                                    : <span className='checkDelivered'><i className="bi bi-check-all"></i></span>
-                                }
                             </div>
                         </div>
                 }

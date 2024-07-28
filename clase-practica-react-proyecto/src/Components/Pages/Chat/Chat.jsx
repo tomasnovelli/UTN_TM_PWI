@@ -1,39 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ListChat from '../../ListChat/ListChat'
 import './chat.css'
 import { useParams } from 'react-router-dom'
 import { contactMessage } from '../../Helpers/contacts'
 import User from '../../User/User'
+import WrittingText from '../../WrittingText/WrittingText'
 
 const Chat = () => {
 
 const params = useParams()
-const {
-        nombre,
-        mensajes,
-        thumbnail
-      } = contactMessage(params.contac_id)
+const chat = contactMessage(params.contact_id)
 
-
-/*   const [newMessage, setNewMessage] = useState(DATA_MOOK)
-
-  const handleSubmit = (e, messageInput) =>{
-    e.preventDefault()
-    setNewMessage([...newMessage, {
-                                    author: messageInput.author, 
-                                    content: messageInput.content, 
-                                    fecha: 'hoy a 11:03', 
-                                    estado: 'entregado', 
-                                    id: 6 
-                                  }
-                  ])
-  } */
 
   return (
-    
     <div className='body'>
-      <User userName={nombre} userImg={thumbnail}/>
-      <ListChat dataMessage={mensajes}/>
+      <User userName={chat.nombre} userImg={chat.thumbnail} userConection={chat.ultima_conexion} />
+      <ListChat dataMessage={chat.mensajes}/>
+      <WrittingText />
     </div>
   )
 }
