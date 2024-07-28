@@ -30,7 +30,7 @@ const ProductNew = () => {
     return (
         <div>
             <Link to={'/'}>Volver</Link>
-            <form onSubmit={(e) => handleCreateProduct(e, { ...nuevoProducto })} action="">
+            <form onSubmit={handleCreateProduct} >
                 <div>
                     <label htmlFor="nombre">Nombre</label>
                     <input type="text" name='nombre' id='nombre' onChange={handleChangeValue} value={nuevoProducto.nombre} />

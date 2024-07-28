@@ -4,14 +4,15 @@ import { users } from '../../data/usersData'
 
 const Login = () => {
 
-    const initialState = { username: '', password: '' }
+    const initialState = { username: '', password: '', role: 'guest' }
     const [loginForm, setLoginform] = useState(initialState)
+    const navigate = useNavigate()
 
     const handleChangeValue = (e) => {
         setLoginform({ ...loginForm, [e.target.name]: e.target.value })
     }
     
-    const navigate = useNavigate()
+
     const handleLogin = (e) =>{
         e.preventDefault()
         for(const user of users){
