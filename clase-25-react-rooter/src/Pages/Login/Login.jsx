@@ -4,7 +4,7 @@ import { users } from '../../data/usersData'
 
 const Login = () => {
 
-    const initialState = { username: '', password: '', role: 'guest' }
+    const initialState = { username: '', password: '' }
     const [loginForm, setLoginform] = useState(initialState)
     const navigate = useNavigate()
 

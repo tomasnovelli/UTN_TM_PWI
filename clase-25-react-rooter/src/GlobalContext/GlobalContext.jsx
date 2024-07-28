@@ -9,7 +9,7 @@ const GlobalContext = createContext()
 export const GlobalContextProvider = ({ children }) => {
 
     const [productos, setProductos] = useState(obtenerProductos())
-    const [carrito, setCarrito] = useState(obtenerCarrito())
+    const [carrito, setCarrito] = useState(obtenerCarrito)
     const navigation = useNavigate()
 
     const handleDeleteProduct = (codigo) => {
