@@ -21,7 +21,7 @@ const ProductCard = ({ producto }) => {
             <br />
             <span>Precio: {precio}</span>
             <br />
-            <Link to={'/detail/' + id}>Ver Detalle</Link>
+            <Link to={'/detail/' + codigo}>Ver Detalle</Link>
             <hr />
             
         </div>

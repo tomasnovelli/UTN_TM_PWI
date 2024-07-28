@@ -1,49 +1,77 @@
 import React, { useState } from 'react'
 import { useGlobalContext } from '../../GlobalContext/GlobalContext'
+import { Link } from 'react-router-dom'
 
 const ProductNew = () => {
-    const {handleCreateProduct} = useGlobalContext()
-    const plantillaNuevoProducto= {
+    const { handleCreateProduct } = useGlobalContext()
+    const CATEGORIAS_DISPONIBLES = [
+        'tecnologia',
+        'hogar',
+        'deportes'
+    ]
+    const plantillaNuevoProducto = {
         nombre: '',
         descripcion: '',
         precio: '',
         stock: '',
         codigo: '',
-        categoria:'',
+        categoria: '',
         thumbnail: ''
     }
     const [nuevoProducto, setNuevoProducto] = useState(plantillaNuevoProducto)
 
-    const handleChangeValue = (e) =>{
+    const handleChangeValue = (e) => {
         const valueToChange = e.target.name
         const newValue = e.target.value
-        setNuevoProducto({...nuevoProducto, [valueToChange]: newValue})
-        
+        setNuevoProducto({ ...nuevoProducto, [valueToChange]: newValue })
+
     }
 
     return (
         <div>
-            <form onSubmit={(e) => handleCreateProduct(e, {...nuevoProducto})} action="">
-                <label htmlFor="nombre">Nombre</label>
-                <input name='nombre' type="text" id='nombre' onChange={handleChangeValue} value={nuevoProducto.nombre}/>
+            <Link to={'/'}>Volver</Link>
+            <form onSubmit={(e) => handleCreateProduct(e, { ...nuevoProducto })} action="">
+                <div>
+                    <label htmlFor="nombre">Nombre</label>
+                    <input type="text" name='nombre' id='nombre' onChange={handleChangeValue} value={nuevoProducto.nombre} />
+                </div>
                 <br />
-                <label htmlFor="descripcion">descripcion</label>
-                <input name='descripcion' type="text" id='descripcion' onChange={handleChangeValue} value={nuevoProducto.descripcion} />
+                <div>
+                    <label htmlFor="descripcion">descripcion</label>
+                    <textarea type="text" name='descripcion' id='descripcion' onChange={handleChangeValue} value={nuevoProducto.descripcion}></textarea>
+                </div>
                 <br />
-                <label htmlFor="precio">Precio</label>
-                <input name='precio' type="text" id='precio' onChange={handleChangeValue} value={nuevoProducto.precio}/>
+                <div>
+                    <label htmlFor="precio">Precio</label>
+                    <input type="text" name='precio' id='precio' onChange={handleChangeValue} value={nuevoProducto.precio} />
+                </div>
                 <br />
-                <label htmlFor="stock">Stock</label>
-                <input name='stock' type="text" id='stock' onChange={handleChangeValue} value={nuevoProducto.stock}/>
+                <div>
+                    <label htmlFor="stock">Stock</label>
+                    <input type="text" name='stock' id='stock' onChange={handleChangeValue} value={nuevoProducto.stock} />
+                </div>
                 <br />
-                <label htmlFor="codigo">Codigo</label>
-                <input name='codigo' type="text" id='codigo' onChange={handleChangeValue} value={nuevoProducto.codigo}/>
+                <div>
+                    <label htmlFor="codigo">Codigo</label>
+                    <input type="text" name='codigo' id='codigo' onChange={handleChangeValue} value={nuevoProducto.codigo} />
+                </div>
                 <br />
-                <label htmlFor="categoria">Categoria</label>
-                <input name='categoria' type="text" id='categoria' onChange={handleChangeValue} value={nuevoProducto.categoria}/>
+                <div>
+                    <label htmlFor="categoria">Categoria</label>
+                    <select name='categoria' id='categoria' onChange={handleChangeValue} value={nuevoProducto.categoria}>
+                        <option value={''} disabled>No Seleccionado</option>
+                        {CATEGORIAS_DISPONIBLES.map((opcion, index) => {
+                            return <option
+                                key={index + opcion}
+                                value={opcion}>{opcion}</option>
+                        })}
+                    </select>
+                </div>
                 <br />
-                <label htmlFor="thumbnail">thumbnail</label>
-                <input name='thumbnail'type="text" id='thumbnail' onChange={handleChangeValue} value={nuevoProducto.thumbnail}/>
+                <div>
+                    <label htmlFor="thumbnail">Ingrese la direccion de la imagen</label>
+                    <input type="text" name='thumbnail' id='thumbnail' onChange={handleChangeValue} value={nuevoProducto.thumbnail} />
+                </div>
                 <br />
                 <button type='submit'>enviar</button>
             </form>

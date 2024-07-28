@@ -1,19 +1,19 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { buscarProductoPorId } from '../../Components/helpers/productos'
 import { useGlobalContext } from '../../GlobalContext/GlobalContext'
 
 const Detail = () => {
     const parametros = useParams()
-    const {handleDeleteProduct} = useGlobalContext()
-
+    const { handleDeleteProduct, buscarProductoPorId, getUserData} = useGlobalContext()
+    const userLoged = getUserData()
+    
     const { nombre,
         descripcion,
         precio,
         id,
         stock,
         codigo,
-        categoria } = buscarProductoPorId(parametros.producto_id)
+        categoria } = buscarProductoPorId(parametros.producto_codigo)
 
 
     return (
@@ -30,7 +30,11 @@ const Detail = () => {
             <br />
             <span>Precio: {precio}</span>
             <button>Comprar</button>
-            <button onClick={() => handleDeleteProduct(id)}>Eliminar Producto</button>
+            {
+                userLoged.role === 'admin' &&
+                <button onClick={() => handleDeleteProduct(codigo)}>Eliminar Producto</button>
+            }
+
             <hr />
         </div>
     )

@@ -23,15 +23,10 @@ export const crearProducto = (nuevoProducto) =>{
 
 }
 
-export const buscarProductoPorId = (id) =>{
-    const listaProductos = obtenerProductos()
-    return listaProductos.find((producto) => Number(producto.id) === Number(id))
-    
-}
 
-export const eliminarProdcutoPorId = (id) => {
+export const eliminarProdcutoPorId = (codigo) => {
     const listaProductos = obtenerProductos()
-    const nuevaLista = listaProductos.filter((producto) => Number(producto.id) !== Number(id))
+    const nuevaLista = listaProductos.filter((producto) => producto.codigo !== codigo)
     guardarProductos(nuevaLista)
     return nuevaLista
 }

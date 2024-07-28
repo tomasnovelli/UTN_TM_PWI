@@ -1,20 +1,43 @@
 import React from 'react'
 import ProductList from '../../Components/ProductList/ProductList'
 import { useGlobalContext } from '../../GlobalContext/GlobalContext'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Home = () => {
 
-    const {productos} = useGlobalContext()
-    
+    const { productos, getUserData, logout } = useGlobalContext()
+
+    const userLoged = getUserData()
     return (
         <div>
+            {   userLoged
+                ?
+                <Link onClick={logout}>Logout</Link>
+                :
+                <Link to={'/login'}>LogIn</Link>
+            }
+            
+            {
+                (userLoged && userLoged.role === 'admin')
+                &&
+                <>
+                    <Link to={'/product/new'}>
+                        Agregar Producto
+                    </Link>
+                    <Link to={'/cart'}>Carrito</Link>
+                </>
+            }
+            {
+                (userLoged && userLoged.role === 'user')
+                &&
+                <>
+                    <Link to={'/cart'}>Carrito</Link>
+                </>
+            }
             <h1>Elige nuestros productos</h1>
             <ProductList products={productos} />
-            <Link to={'/product/new'}>
-            <button>Agregar Producto</button>
-            </Link>
+
 
         </div>
     )
