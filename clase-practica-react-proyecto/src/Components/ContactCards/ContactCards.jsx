@@ -10,9 +10,7 @@ const ContactCards = ({ contactData }) => {
         id,
         mensajes
     } = contactData
-    const ultimoMensaje = () => {
 
-    }
     return (
         <div className='contactos'>
             <div className='containerImg'>

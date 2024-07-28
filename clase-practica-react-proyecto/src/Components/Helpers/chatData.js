@@ -1,8 +1,8 @@
 import { DATA_CONTACTOS } from "../dataMook"
 
 const guardarHistorial = (historial) => {
-    const productoJSON = JSON.stringify(historial)
-    localStorage.setItem('historial', productoJSON)
+    const historialJSON = JSON.stringify(historial)
+    localStorage.setItem('historial', historialJSON)
 }
 
 export const obtenerHistorial = () =>{
