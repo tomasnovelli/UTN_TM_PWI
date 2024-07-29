@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './writtingText.css'
 import { useGlobalContext } from '../GlobalContext.jsx/GlobalContext'
 

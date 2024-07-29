@@ -8,9 +8,8 @@ export const GlobalContextProvider = ({ children }) => {
 
     const [historialChat, setHistorialChat] = useState(obtenerHistorial())
 
-    console.log(historialChat)
+
     const initialState = {
-        author: 'Yo',
         text: ''
     }
     const [messageInput, setMessageInput] = useState(initialState)
@@ -18,24 +17,21 @@ export const GlobalContextProvider = ({ children }) => {
     const handleChangeContentValue = (e) => {
         const valueToChange = e.target.name
         const newValue = e.target.value
-        setMessageInput({ ...messageInput, [valueToChange]: newValue })
+        setMessageInput({ ...messageInput, [valueToChange]: newValue})
     }
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault()
-        const form = e.target
-        const formValue = new FormData(form)
+        const formulario = e.target
         const nuevoMensaje = {
             author: 'Yo',
-            text: '',
-            date: 'ayer 13:15',
+            text: formulario.text.value,
+            state: 'entregado',
+            date: '13:52',
             id: ''
-        }
-        for(let propiedad in nuevoMensaje){
-            nuevoMensaje[propiedad] = formValue.get(propiedad)
         }
         nuevoMensaje.id = uuid()
     }
-    
+
     return (
         <div>
             <GlobalContext.Provider value={
