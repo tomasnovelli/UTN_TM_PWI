@@ -1,12 +1,12 @@
 import React from 'react'
 import ContactCards from '../ContactCards/ContactCards'
 
-const ContactList = ({dataMook}) => {
+const ContactList = ({dataMock}) => {
 
     return (
         <>
             {
-                dataMook.map((contacts) => {
+                dataMock.map((contacts) => {
                     return (
                         <ContactCards contactData={contacts} key={contacts.id} />
                     )
